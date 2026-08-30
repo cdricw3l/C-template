@@ -58,6 +58,17 @@ endif
 
 # Commande
 
+## Duplicate the template
+
+```bash
+
+./run.sh <destination path> <project name>
+
+```
+
+
+## run the template
+
 Lancer le module de test draft + verification de memoire:
 ```bash
 make test TYPE=draft MEMORY_CHECK=1
@@ -75,11 +86,11 @@ Lancer le module de test end to end + verification de memoire:
 ```bash
 make test TYPE=e2e MEMORY_CHECK=1
 ```
-Supprimer tout les fichiers object
+Supprimer tout les fichiers object:
 ```bash
 make clean
 ```
-Supprimer tout les executables object
+Supprimer tout les executables:
 ```bash
 make fclean
 ```

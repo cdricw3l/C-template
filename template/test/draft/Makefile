@@ -1,4 +1,5 @@
 include ../config.mk
+
 NAME=draft_test
 
 TEST_SRCS= $(wildcard *.c)
