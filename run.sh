@@ -10,7 +10,7 @@ if [ -d $DEST ]; then
     cp -r $PWD/template $DEST
     mv $DEST/template $DEST/$PROJECT_NAME
 else
-    echo path doesn\'t exist;
+    echo destination path doesn\'t exist;
 fi
 
 
