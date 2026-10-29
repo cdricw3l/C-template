@@ -1,5 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Werror -Wextra -g
+#CFLAGS= -g
 TYPE ?= unit
 MEMORY_CHECK ?= 0
 MEMORY_LOG= memory.log
@@ -15,9 +16,9 @@ endif
 
 run:
 ifeq ($(MEMORY_CHECK),1)
-	$(MEMORY_CHECK_ARG) ./$(NAME)
+	@$(MEMORY_CHECK_ARG) ./$(NAME)
 else
-	./$(NAME)
+	@./$(NAME)
 endif
 
 clean:

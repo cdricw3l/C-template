@@ -4,8 +4,8 @@ INTEGRATION := integration
 E2E := e2e
 
 test:
-	make -C $(TYPE) test
-	make -C $(TYPE) run
+	@make -C $(TYPE) test
+	@make -C $(TYPE) run
 
 clean:
 	@make -C $(DRAFT) clean

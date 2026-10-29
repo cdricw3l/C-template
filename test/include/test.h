@@ -12,7 +12,7 @@
 #include <stdio.h>     // printf, fprintf, FILE...
 #include <string.h>    // strlen, strcmp, memcpy...
 #include <unistd.h>    // read, write, close, fork... (POSIX)
-
+#include "../../include/heap.h"
 
 /*
     #include <assert.h>     // assert()
@@ -38,5 +38,17 @@
     #include <netdb.h>
 */
 
+#define START_TEST printf(YEL"Start %s()"CRESET"\n", __func__)
+#define END_TEST printf(GRN"%s() OK"CRESET"\n", __func__)
+
+
+
+/* unit test */
+
+void    unit_heap_init(void);
+void    unit_heap_new_node(void);
+void    unit_heap_swap_node(void);
+void    unit_heap_display_node(void);
+void    unit_heappush(void);
 
 #endif
