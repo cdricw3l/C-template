@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 12:12:26 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/30 09:31:23 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 16:48:49 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	push(t_heap_node **queue, t_heap_node *node)
 {
 	int	i;
 
-	if (!queue || !*queue)
-		return ;
 	i = 0;
 	while (queue[i])
 		i++;
@@ -28,8 +26,6 @@ void	pop(t_heap_node **queue, int queue_size)
 {
 	int	i;
 
-	if (!queue || !*queue)
-		return ;
 	i = 0;
 	while (i < queue_size - 1)
 	{
@@ -75,7 +71,7 @@ static t_heap_node	**get_heap_as_arr(t_heap *heap, t_heap_node **queue)
 	return (arr);
 }
 
-t_heap_node	**bfs_binary_tree_as_arr(t_heap *heap)
+t_heap_node	**heap_bfs_binary_tree_as_arr(t_heap *heap)
 {
 	t_heap_node	**queue;
 	t_heap_node	**arr;
@@ -87,6 +83,7 @@ t_heap_node	**bfs_binary_tree_as_arr(t_heap *heap)
 		return (NULL);
 	memset(queue, 0, sizeof(t_heap_node *) * (heap->size_queue + 1));
 	arr = get_heap_as_arr(heap, queue);
+	assert(arr[0]);
 	free(queue);
 	return (arr);
 }

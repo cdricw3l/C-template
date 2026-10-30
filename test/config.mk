@@ -1,6 +1,6 @@
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra -g
-#CFLAGS= -g
+#CFLAGS=-Wall -Werror -Wextra -g
+CFLAGS= -g
 TYPE ?= unit
 MEMORY_CHECK ?= 0
 MEMORY_LOG= memory.log

@@ -6,18 +6,20 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 09:58:53 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/23 20:42:49 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 16:14:44 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/heap.h"
 
-void	heap_iter(t_heap_node *root,
-	void (*f)(t_heap_node *, void (*content)(void *)), void (*content)(void *))
+/**
+ * heap_iter itere over heap and change the content of the node
+ */
+void	heap_iter(t_heap_node *root, void (*f)(t_heap_node *node))
 {
-	if (!root)
+	if (!root || !f)
 		return ;
-	heap_iter(root->left, f, content);
-	f(root, content);
-	heap_iter(root->right, f, content);
+	heap_iter(root->left, f);
+	f(root);
+	heap_iter(root->right, f);
 }

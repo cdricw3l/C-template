@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 09:13:48 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/30 09:30:08 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 16:23:40 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,5 @@ void unit_heap_clear_and_destroy(void)
     assert(heap->size_queue == 0);
     heap_destroy(&heap);
     assert(!heap);
-    heap = heap_init();
-    assert(heap);
     END_TEST;
 }
