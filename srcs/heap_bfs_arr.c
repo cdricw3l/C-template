@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 12:12:26 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/23 20:42:26 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 09:31:23 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	push(t_heap_node **queue, t_heap_node *node)
 {
 	int	i;
 
-	// if (!queue || !*queue)
-	// 	return ;
+	if (!queue || !*queue)
+		return ;
 	i = 0;
 	while (queue[i])
 		i++;
@@ -28,8 +28,8 @@ void	pop(t_heap_node **queue, int queue_size)
 {
 	int	i;
 
-	// if (!queue || !*queue)
-	// 	return ;
+	if (!queue || !*queue)
+		return ;
 	i = 0;
 	while (i < queue_size - 1)
 	{

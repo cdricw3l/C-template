@@ -8,5 +8,6 @@ int main(void)
     unit_heap_swap_node();
     unit_heap_display_node();
     unit_heappush();
+    unit_heap_clear_and_destroy();
     return (0);
 }

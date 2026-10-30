@@ -50,5 +50,6 @@ void    unit_heap_new_node(void);
 void    unit_heap_swap_node(void);
 void    unit_heap_display_node(void);
 void    unit_heappush(void);
+void unit_heap_clear_and_destroy(void);
 
 #endif

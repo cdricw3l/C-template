@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:24:47 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/10/29 16:20:33 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 09:26:26 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ static void	clear_queue(t_heap_node *root, void (*f)(void *))
 	clear_queue(root->left, f);
 	clear_queue(root->right, f);
 	if (f)
-	{
-		printf("voici f : %p\n", f);
 		f(root->content);
-	}
 	free(root);
 }
 

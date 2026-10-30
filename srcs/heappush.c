@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:39:24 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/29 16:33:24 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 09:20:19 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int	heappush(t_heap *heap, t_heap_node *node,  int (*cmp)(void *p1, void *p2))
 
 	if (heap_add_node(heap, node) == FALSE)
 		return (FALSE);
+	if (!cmp)
+		return (TRUE);
 	current = node;
 	if (!current)
 		return (FALSE);
