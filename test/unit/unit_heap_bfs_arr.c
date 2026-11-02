@@ -6,7 +6,7 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 16:24:55 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/30 17:01:22 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 18:16:51 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void unit_heap_bfs_arr(void)
     {
         len++;
     }
-    assert(len == 2);
+    assert(len == 1);
     assert(!strcmp("hello", (*arr)->content));
     free(arr);
     heap_clear(heap, free);

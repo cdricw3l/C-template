@@ -6,13 +6,13 @@
 /*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 12:12:26 by cebouhad          #+#    #+#             */
-/*   Updated: 2026/10/30 16:48:49 by cebouhad         ###   ########.fr       */
+/*   Updated: 2026/10/30 18:21:55 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/heap.h"
 
-void	push(t_heap_node **queue, t_heap_node *node)
+static void	push(t_heap_node **queue, t_heap_node *node)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ void	push(t_heap_node **queue, t_heap_node *node)
 	queue[i] = node;
 }
 
-void	pop(t_heap_node **queue, int queue_size)
+static void	pop(t_heap_node **queue, int queue_size)
 {
 	int	i;
 
@@ -71,6 +71,15 @@ static t_heap_node	**get_heap_as_arr(t_heap *heap, t_heap_node **queue)
 	return (arr);
 }
 
+/**
+ * @brief Converts a binary tree into a t_heap_node array using a Breadth-First Search (BFS) algorithm.
+ *
+ * This function traverses the binary heap level by level (level-order traversal)
+ * and flattens its structure into a contiguous array representation.
+ *
+ * @param heap The pointer to the binary heap structure to process.
+ * @return A pointer to the newly allocated t_heap_node array, or NULL on failure.
+ */
 t_heap_node	**heap_bfs_binary_tree_as_arr(t_heap *heap)
 {
 	t_heap_node	**queue;

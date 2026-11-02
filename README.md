@@ -1,8 +1,8 @@
-*This project has been created as part of the 42 curriculum by .*
-
-# 🔄 Template
-
 ## 📖 Description
+
+heap_lib tree est une librairie qui permet de manager des file de priorité sous la forme d'arbre binaire complet.
+
+
 
 ## ⚙️ Instructions
 
